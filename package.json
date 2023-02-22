@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "dev": "port=3100 next dev"
+        "dev": "set port=3100 && next dev"
     },
     "dependencies": {
         "next": "^13.1.6",

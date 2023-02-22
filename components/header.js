@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Layout = styled.header`
     background-color: #303b44;
-    padding: 0.75rem;
+    padding: 12px;
     display: flex;
     justify-content: space-around;
 `;

@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import routes from '../routes';
 
 const Layout = styled.div`
     background-color: #ffffff;
@@ -39,10 +38,10 @@ const MainMenu = () => {
         <Layout>
             <Container>
                 <TabPanel>
-                    <TabItem route={routes.home} currentRoute={router.pathname} onClick={() => handleClick({ route: routes.home })}>Мой кабинет</TabItem>
-                    <TabItem route={routes.kitchen} currentRoute={router.pathname} onClick={() => handleClick({ route: routes.kitchen })}>Кухня</TabItem>
-                    <TabItem route={routes.sportRoom} currentRoute={router.pathname} onClick={() => handleClick({ route: routes.sportRoom })}>Спортзал</TabItem>
-                    <TabItem route={routes.library} currentRoute={router.pathname} onClick={() => handleClick({ route: routes.library })}>Библиотека</TabItem>
+                    <TabItem route='/' currentRoute={router.pathname} onClick={() => handleClick({ route: '/' })}>Мой кабинет</TabItem>
+                    <TabItem route='/kitchen' currentRoute={router.pathname} onClick={() => handleClick({ route: '/kitchen' })}>Кухня</TabItem>
+                    <TabItem route='/sport-room' currentRoute={router.pathname} onClick={() => handleClick({ route: '/sport-room' })}>Спортзал</TabItem>
+                    <TabItem route='/library' currentRoute={router.pathname} onClick={() => handleClick({ route: '/library' })}>Библиотека</TabItem>
                 </TabPanel>
             </Container>
         </Layout>
