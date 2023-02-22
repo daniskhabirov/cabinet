@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-const Layout = styled.div`
+const Layout = styled.footer`
+    font-size: 0.75rem;
     background-color: #1d2023;
-    padding: 0.5rem;
+    padding: 0.25rem;
     display: flex;
     justify-content: space-around;
     position: fixed;
@@ -20,15 +21,13 @@ const Copyright = styled.div`
 
 const Footer = () => {
     return (
-        <>
-            <Layout>
-                <Container>
-                    <Copyright>
-                        © 2023, Danis Khabirov
-                    </Copyright>
-                </Container>
-            </Layout>
-        </>
+        <Layout>
+            <Container>
+                <Copyright>
+                    © 2023, Danis Khabirov
+                </Copyright>
+            </Container>
+        </Layout>
     );
 };
 

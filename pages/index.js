@@ -7,8 +7,8 @@ const Layout = styled.div`
 `;
 
 const Container = styled.div`
-    width: 1096px;
     background-color: #ffffff;
+    width: 1096px;
 `;
 
 export default function Home() {

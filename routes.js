@@ -1,7 +1,8 @@
 const Routes = {
     home: '/',
-    develop: '/develop',
-    admin: '/admin'
+    library: '/library',
+    kitchen: '/kitchen',
+    sportRoom: '/sport-room',
 };
 
 export default Routes;

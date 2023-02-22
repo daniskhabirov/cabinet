@@ -1,12 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+    * {
+        margin: 0;
+        padding: 0;
+    };
+    
     html {
-        font-size: 16px;
-        background-color: #f0f0f0;
+            background-color: #f0f0f0;
     };
 
     body {
-        margin: 0;
+        font-size: 16px;
+        font-family: sans-serif;
+        min-height: 100vh;
     };
 `;
