@@ -1,31 +1,19 @@
-import styled from 'styled-components';
 import GlobalStyles from '../styles/global';
-import Header from '../components/header';
-import MainMenu from '../components/mainMenu';
-import Footer from '../components/footer';
-
-const Layout = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-`;
-
-const Content = styled.div`
-    flex-grow: 3;
-`;
+import Header from '../components/layout/Header';
+import Appbar from '../components/layout/Appbar';
+import Content from '../components/layout/Content';
+import Footer from '../components/layout/Footer';
 
 const App = ({ Component, pageProps }) => {
     return (
         <>
             <GlobalStyles />
-            <Layout>
-                <Header />
-                <MainMenu />
-                <Content>
-                    <Component {...pageProps} />
-                </Content>
-                <Footer />
-            </Layout>
+            <Header />
+            <Appbar />
+            <Content>
+                <Component {...pageProps} />
+            </Content>
+            <Footer />
         </>
     );
 };

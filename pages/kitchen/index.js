@@ -1,3 +1,5 @@
-export default function Kitchen() {
-    return <div>Admin</div>
-}
+const Kitchen = () => (
+    <div>Kitchen</div>
+);
+
+export default Kitchen;

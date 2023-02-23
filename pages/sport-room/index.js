@@ -1,3 +1,5 @@
-export default function SportRoom() {
-    return <div>Develop</div>
-}
+const SportRoom = () => (
+    <div>SportRoom</div>
+);
+
+export default SportRoom;
