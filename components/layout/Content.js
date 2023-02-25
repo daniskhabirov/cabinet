@@ -5,7 +5,8 @@ import {
 const Content = ({ children }) => (
     <Container sx={{
         padding: '12px',
-        width: '1144px'
+        width: '1144px',
+        flexGrow: 3
     }}>
         {children}
     </Container>
