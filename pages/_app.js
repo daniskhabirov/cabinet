@@ -20,7 +20,7 @@ const App = ({ Component, pageProps }) => (
         <Content>
             <Box sx={{
                 position: 'absolute',
-                left: '-150px'
+                left: '-200px'
             }}>
                 <VerticalRouteStepper />
             </Box>

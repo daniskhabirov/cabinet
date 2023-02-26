@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import styled from 'styled-components';
+import Link from 'next/link'
 import {
     Box,
     Stepper,
@@ -7,9 +9,15 @@ import {
     StepLabel,
 } from '@mui/material';
 
+const StyledLink = styled(Link)`
+    color: inherit;
+    text-decoration: none;
+`;
+
 const VerticalRouteStepper = () => {
     const router = useRouter();
     const [pages, setPages] = useState([]);
+    const [steps, setSteps] = useState([]);
     const [activeStep, setActiveStep] = useState(0);
 
     useEffect(() => {
@@ -22,20 +30,65 @@ const VerticalRouteStepper = () => {
         };
     }, [router]);
 
+    useEffect(() => {
+        fetchSteps();
+        function fetchSteps() {
+            let steps = [];
+            pages.forEach(page => {
+                switch (page) {
+                    case ('develop'):
+                        return steps.push({
+                            id: page,
+                            name: 'Разработка',
+                            route: '/library/develop'
+                        })
+                    case ('programming'):
+                        return steps.push({
+                            id: page,
+                            name: 'Программирование',
+                            route: '/library/develop/programming'
+                        })
+                    case ('languages'):
+                        return steps.push({
+                            id: page,
+                            name: 'Языки программирования',
+                            route: '/library/develop/programming/languages'
+                        })
+                    case ('history'):
+                        return steps.push({
+                            id: page,
+                            name: 'История языков программирования',
+                            route: '/library/develop/programming/languages/history'
+                        })
+                    default:
+                        return null
+                };
+            });
+            setSteps(steps);
+        };
+    }, [pages])
 
-    if (pages.length < 3) return null;
+
+    if (steps.length < 2) return null;
     return (
-        <Box>
+        <Box sx={{ width: '200px' }}>
             <Stepper activeStep={activeStep} orientation='vertical'>
-                {pages.slice(1).map((page, index) => (
-                    <Step key={page} completed={false} active={index === pages.slice(1).length - 1}>
-                        <StepLabel>
-                            {page}
-                        </StepLabel>
+                {steps.map((step, index) => (
+                    <Step key={step.id} completed={false} active={index === steps.length - 1}>
+                        <Box sx={{
+                            pl: '5px',
+                            '&:hover': { bgcolor: '#e9e9e9' }
+                        }}>
+                            <StyledLink href={step.route}>
+                                <StepLabel sx={{ wordWrap: 'break-word' }}>
+                                    {step.name}
+                                </StepLabel>
+                            </StyledLink>
+                        </Box>
                     </Step>
                 ))}
             </Stepper>
-        </Box >
+        </Box>
     );
 };
 
