@@ -14,6 +14,11 @@ import CodeIcon from '@mui/icons-material/Code';
 import StorageIcon from '@mui/icons-material/Storage';
 import oldBooksImage from '/public/images/old-books.webp';
 
+const StyledImage = styled(Image)`
+    width: 100%;
+    height: calc(100% / 2);
+`;
+
 const StyledListItem = styled(ListItem)`
     padding: 0;
 `;
@@ -29,7 +34,8 @@ const StyledLink = styled(Link)`
 
 const Library = () => (
     <Box sx={{
-        display: 'flex'
+        display: 'flex',
+        position: 'relative'
     }}>
         <Box sx={{
             mr: '16px',
@@ -55,7 +61,7 @@ const Library = () => (
                 <Box sx={{
                     mb: '1rem'
                 }}>
-                    <Image
+                    <StyledImage
                         src={oldBooksImage}
                         alt='Picture of the old books'
                         priority

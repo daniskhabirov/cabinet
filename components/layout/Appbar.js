@@ -15,7 +15,7 @@ const TabItem = styled.button`
     };
 `;
 
-const MainMenu = () => {
+const Appbar = () => {
     const router = useRouter();
     const handleClick = ({ route = '/' }) => {
         router.push(route);
@@ -24,12 +24,11 @@ const MainMenu = () => {
     return (
         <Box sx={{
             backgroundColor: '#ffffff',
-            padding: '0.75rem',
-            display: 'flex',
-            justifyContent: 'space-around'
+            padding: '10px 0 10px 0'
         }}>
             <Box sx={{
-                width: '1096px'
+                width: '1096px',
+                m: '0 auto'
             }}>
                 <Box sx={{
                     display: 'flex',
@@ -45,4 +44,4 @@ const MainMenu = () => {
     );
 };
 
-export default MainMenu;
+export default Appbar;
