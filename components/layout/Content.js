@@ -7,7 +7,7 @@ const Content = ({ children }) => (
         display: 'flex',
         position: 'relative',
         padding: '12px 0 24px 0',
-        width: '1096px',
+        maxWidth: '1096px',
         height: '100vh',
         m: '0 auto'
     }}>

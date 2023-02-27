@@ -27,7 +27,7 @@ const Appbar = () => {
             padding: '10px 0 10px 0'
         }}>
             <Box sx={{
-                width: '1096px',
+                maxWidth: '1096px',
                 m: '0 auto'
             }}>
                 <Box sx={{

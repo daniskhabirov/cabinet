@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "dev": "set port=3100 && next dev"
+        "dev": "PORT=7777 next dev"
     },
     "dependencies": {
         "@emotion/react": "^11.10.6",
