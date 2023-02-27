@@ -41,8 +41,8 @@ const Programming = () => (
         display: 'flex'
     }}>
         <Box sx={{
-            mr: '16px',
-            width: 'calc(100% - 300px)'
+            mr: { md: '16px', sm: 0 },
+            width: { md: 3 / 4, sm: 1 }
         }}>
             <Box sx={{
                 p: '14px 16px',
@@ -85,7 +85,8 @@ const Programming = () => (
             </Box>
         </Box>
         <Box sx={{
-            width: '300px'
+            width: 1 / 4,
+            display: { sm: 'none', md: 'block' }
         }}>
             <Box sx={{
                 backgroundColor: '#ffffff'
@@ -188,7 +189,7 @@ const Programming = () => (
                 </Box>
             </Box>
         </Box>
-    </Box>
+    </Box >
 );
 
 export default Programming;

@@ -14,13 +14,14 @@ const Logo = styled(Link)`
 const Header = () => {
     return (
         <Box sx={{
-            backgroundColor: '#303b44',
+            bgcolor: '#303b44',
             padding: '12px',
             display: 'flex',
             justifyContent: 'space-around'
         }}>
             <Box sx={{
-                width: '1096px'
+                width: 1,
+                maxWidth: '1096px'
             }}>
                 <Logo href='/'>Кабинет</Logo>
             </Box>

@@ -1,26 +1,28 @@
 import {
-    Box
+    Box,
+    Typography
 } from '@mui/material';
 
 const Footer = () => {
     return (
         <Box sx={{
             fontSize: '0.75rem',
-            backgroundColor: '#1d2023',
+            bgcolor: '#1d2023',
             padding: '0.25rem 0 0.25rem 0',
             display: 'flex',
             justifyContent: 'space-around'
         }}>
             <Box sx={{
-                width: '1096px'
+                width: 1,
+                maxWidth: '1096px'
             }}>
-                <Box sx={{
-                    color: '#ffffff'
+                <Typography variant='body2' sx={{
+                    color: '#f0f0f0'
                 }}>
-                    © 2023, Danis Khabirov
-                </Box>
+                    © 2023
+                </Typography>
             </Box>
-        </Box>
+        </Box >
     );
 };
 

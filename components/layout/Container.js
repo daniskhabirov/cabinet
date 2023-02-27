@@ -2,16 +2,17 @@ import {
     Box
 } from '@mui/material';
 
-const Content = ({ children }) => (
+const Container = ({ children }) => (
     <Box sx={{
         display: 'flex',
+        flexGrow: 1,
         position: 'relative',
         padding: '12px 0 24px 0',
         maxWidth: '1096px',
-        height: '100vh',
         m: '0 auto'
     }}>
         <Box sx={{
+            display: 'flex',
             flexGrow: 3
         }}>
             {children}
@@ -19,4 +20,4 @@ const Content = ({ children }) => (
     </Box>
 );
 
-export default Content;
+export default Container;

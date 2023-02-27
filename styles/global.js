@@ -11,6 +11,9 @@ export default createGlobalStyle`
     };
 
     body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
         font-size: 16px;
         font-family: sans-serif;
     };

@@ -4,8 +4,8 @@ import {
 } from '@mui/material';
 import Header from '/components/layout/Header';
 import Appbar from '/components/layout/Appbar';
-import VerticalRouteStepper from '/components/navigation/stepper/VerticalRouteStepper';
-import Content from '/components/layout/Content';
+import VerticalRouteStepper from '/components/navigation/VerticalRouteStepper';
+import Container from '/components/layout/Container';
 import Footer from '/components/layout/Footer';
 
 const App = ({ Component, pageProps }) => (
@@ -17,15 +17,17 @@ const App = ({ Component, pageProps }) => (
         <GlobalStyles />
         <Header />
         <Appbar />
-        <Content>
-            <Box sx={{
-                position: 'absolute',
-                left: '-200px'
-            }}>
-                <VerticalRouteStepper />
-            </Box>
-            <Component {...pageProps} />
-        </Content>
+        <Container>
+            <>
+                <Component {...pageProps} />
+                <Box sx={{
+                    position: 'absolute',
+                    right: '-200px'
+                }}>
+                    <VerticalRouteStepper />
+                </Box>
+            </>
+        </Container>
         <Footer />
     </Box>
 );
